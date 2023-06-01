@@ -1,0 +1,22 @@
+.icono{
+    display: inline;
+    width: 15%;
+    height: auto;
+    object-position: bottom 10px ;
+}
+
+.redes-sociales{
+    display: inline;
+    width: 10%;
+    height: auto;
+    object-position: bottom 10px ;
+}
+
+.objetos-menu{
+    height: 50%;
+}
+
+.navbar-dark .nav-item > .nav-link.active {
+    color:white;
+    background-color: red;
+}
