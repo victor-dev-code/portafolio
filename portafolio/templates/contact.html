@@ -1,2 +1,162 @@
 {% extends "base.html" %}
 
+{% block encabezado %}
+    <h1>CONTACT PAGE</h1>
+{% endblock %}
+
+{% block contenido%}
+    <section class="ftco-section">
+        <!--div class="container">
+            <div class="row justify-content">
+				<div class="col-md-6 text-center mb-5">
+                    <h2 class="heading-section">Contact Form</h2>
+				</div>
+			</div>
+        </div>
+        <div class="row justify-content-center ">
+            <div class="col-lg-10">
+                <div class="wrapper">
+                    <div class="row no-gutters">
+                        <div class="col-md-6 d-flex align-items-stretch">
+                            <div class="contact-wrap w-100 p-md-5 p-4 py-5">
+                                <h3 class="mb-4">Write me</h3>
+                                <div id="form-message-warning" class="mb-4"></div> 
+                          <div id="form-message-success" class="mb-4">
+                        Your message was sent successfully, thank you!
+                          </div>
+                            <form class="form-horizontal" id="form" action="/gestion" method="POST">
+                                {% csrf_token %}
+
+                                <div class="col-sm-12"></div><br />
+        	                        <div class="col-sm-3"></div>
+         	                        <div class="col-sm-3 text-left">
+            	                    <input type="submit" value="Send Message">
+                                </div>
+                                
+                            </form>
+                            </div>
+                        </div>
+                        <div class="col-md-6 d-flex align-items-stretch">
+                            <div class="info-wrap w-100 p-md-5 p-4 py-5 img">
+                                <h3>Hello there! </h3>
+                                <p class="mb-4">Email me with any question, I would be happy to answer you and...</p>
+                        <div class="dbox w-100 d-flex align-items-center">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-paper-plane"></span>
+                            </div>
+                            <div class="text pl-3">
+                            <p><span>Email:</span> <a href="#">hdezyvictor99@gmail.com</a></p>
+                          </div>
+                      </div>
+                        <div class="dbox w-100 d-flex align-items-center">
+                            <div class="icon d-flex align-items-center justify-content-center">
+                                <span class="fa fa-globe"></span>
+                            </div>
+                            <div class="text pl-3">
+                            <p><span>Home page:</span> <a href="#">elvictor099.com</a></p>
+                          </div>
+                      </div>
+                  </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div-->
+        <div class="container">
+            <div class="container">
+                <div class="row justify-content">
+				    <div class="text-center mb-5">
+                        <h2 class="heading-section">Contact Form</h2>
+				    </div>
+			    </div>
+            </div>
+            <div class="contact__wrapper shadow-lg mt-n9">
+                <div class="row no-gutters">
+                    <div class="col-lg-5 contact-info__wrapper gradient-brand-color p-5 order-lg-2">
+                        <h3 class="color--white mb-5">Hello there!</h3>
+                        <p class="mb-4">Email me with any question, I would be happy to answer you and...</p>
+            
+                        <ul class="contact-info__list list-style--none position-relative z-index-101">
+                            <li class="mb-4 pl-4">
+                                <b><span class="position-absolute"><i class="fas fa-envelope">Email: </i></span></b> hdezyvictor99@gmail.com
+                            </li>
+                            <li class="mb-4 pl-4">
+                                <b><span class="position-absolute"><i class="fas fa-phone">Web: </i></span></b> elvictor099.com
+                            </li>
+                        </ul>
+            
+                        <figure class="figure position-absolute m-0 opacity-06 z-index-100" style="bottom:0; right: 10px">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="444px" height="626px">
+                                <defs>
+                                    <linearGradient id="PSgrad_1" x1="0%" x2="81.915%" y1="57.358%" y2="0%">
+                                        <stop offset="0%" stop-color="rgb(255,255,255)" stop-opacity="1"></stop>
+                                        <stop offset="100%" stop-color="rgb(0,54,207)" stop-opacity="0"></stop>
+                                    </linearGradient>
+            
+                                </defs>
+                                <path fill-rule="evenodd" opacity="0.302" fill="rgb(72, 155, 248)" d="M816.210,-41.714 L968.999,111.158 L-197.210,1277.998 L-349.998,1125.127 L816.210,-41.714 Z"></path>
+                                <path fill="url(#PSgrad_1)" d="M816.210,-41.714 L968.999,111.158 L-197.210,1277.998 L-349.998,1125.127 L816.210,-41.714 Z"></path>
+                            </svg>
+                        </figure>
+                    </div>
+            
+                    <div class="col-lg-7 contact-form__wrapper p-5 order-lg-1">
+                        <form action="#" class="contact-form form-validate" novalidate="novalidate" method="POST">
+                            {% csrf_token %}
+                            <div class="row">
+                                <div class="col-sm-6 mb-3">
+                                    <div class="form-group">
+                                        {{ form }}
+                                    </div>
+                                </div>
+            
+                                <!--div class="col-sm-6 mb-3">
+                                    <div class="form-group">
+                                        <label class="required-field" for="firstName">Prénom</label>
+                                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Jean">
+                                    </div>
+                                </div>
+            
+                                <div class="col-sm-6 mb-3">
+                                    <div class="form-group">
+                                        <label for="lastName">Nom</label>
+                                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Dupont">
+                                    </div>
+                                </div>
+            
+                                <div class="col-sm-6 mb-3">
+                                    <div class="form-group">
+                                        <label class="required-field" for="email">Email</label>
+                                        <input type="text" class="form-control" id="email" name="email" placeholder="jean@dupont.com">
+                                    </div>
+                                </div>
+            
+                                <div class="col-sm-6 mb-3">
+                                    <div class="form-group">
+                                        <label for="phone">Téléphone</label>
+                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+32 71 123 456">
+                                    </div>
+                                </div>
+            
+                                <div class="col-sm-12 mb-3">
+                                    <div class="form-group">
+                                        <label class="required-field" for="message">Comment pouvons-nous vous aider ?</label>
+                                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Bonjour, j'aimerais…"></textarea>
+                                    </div>
+                                </div-->
+            
+                                <div class="col-sm-12 mb-3">
+                                    <button type="submit" name="submit" class="btn btn-primary">Send Message</button>
+                                </div>
+            
+                            </div>
+                        </form>
+                    </div>
+                    <!-- End Contact Form Wrapper -->
+            
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}
