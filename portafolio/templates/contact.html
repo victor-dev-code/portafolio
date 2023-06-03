@@ -2,7 +2,7 @@
 
 
 {% block contenido%}
-    <section class="ftco-section">
+    <section class="container ftco-section">
         <!--div class="container">
             <div class="row justify-content">
 				<div class="col-md-6 text-center mb-5">
@@ -60,14 +60,14 @@
             </div>
         </div-->
         <div class="container">
-            <div class="container">
+            <header class="container">
                 <div class="row justify-content">
 				    <div class="text-center mb-5">
                         <h2 class="heading-section">Contact Form</h2>
 				    </div>
 			    </div>
-            </div>
-            <div class="contact__wrapper shadow-lg mt-n9">
+            </header>
+            <div class="container contact__wrapper shadow-lg mt-n9">
                 <div class="row no-gutters">
                     <div class="col-lg-5 contact-info__wrapper gradient-brand-color p-5 order-lg-2">
                         <h3 class="color--white mb-5">Hello there!</h3>
@@ -75,10 +75,10 @@
             
                         <ul class="contact-info__list list-style--none position-relative z-index-101">
                             <li class="mb-4 pl-4">
-                                <b><span class="position-absolute"><i class="fas fa-envelope">Email: </i></span></b> hdezyvictor99@gmail.com
+                                <b><span class="position-absolute"><i class="fas fa-envelope"> Mail: </i></span></b> hdezyvictor99@gmail.com
                             </li>
                             <li class="mb-4 pl-4">
-                                <b><span class="position-absolute"><i class="fas fa-phone">Web: </i></span></b> elvictor099.com
+                                <b><span class="position-absolute"><i class="fas fa-phone"> Web: </i></span></b> elvictor099.com
                             </li>
                         </ul>
             
@@ -99,9 +99,9 @@
             
                     <div class="col-lg-7 contact-form__wrapper p-5 order-lg-1">
                         {% if 'ok' in request.GET %}
-                            <div id="form-message-warning" class="mb-4"></div> 
-                            <div id="form-message-success" class="mb-4">
-                                Your message was sent successfully, thank you!
+                            <div id="form-message-success" class="alert alert-success alert-dismissible mb-4">
+                                <button type="button" class="close" data-dismiss="alert">&times;</button>
+                                <strong>Success!</strong> Your message was sent successfully, thank you!
                             </div>
                         {% endif %}
                         <form action="contact_me" class="contact-form form-validate" novalidate="novalidate" method="POST">
@@ -117,6 +117,7 @@
                                     <div class="form-group">
                                         <label class="required-field" for="name">Name</label>
                                         <div class="input-group" id="name">{{form.name}}</div>
+                                        {{form.name.errors}}
                                     </div>
                                 </div>
             
@@ -124,14 +125,15 @@
                                     <div class="form-group">
                                         <label class="required-field" for="email">Email</label>
                                         <div class="input-group" id="email">{{form.email}}</div>
+                                        {{form.email.errors}}
                                     </div>
                                 </div>
             
                                 <div class="col-sm-12 mb-3">
                                     <div class="form-group">
                                         <label class="required-field" for="message">Message</label>
-                                        <!--textarea class="input-group" id="message" name="message" rows="4" placeholder="Content"></textarea-->
                                         <div class="input-group" id="message">{{form.content}}</div>
+                                        {{form.content.errors}}
                                     </div>
                                 </div>
             
@@ -142,7 +144,6 @@
                             </div>
                         </form>
                     </div>
-                    <!-- End Contact Form Wrapper -->
             
                 </div>
             </div>

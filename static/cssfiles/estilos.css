@@ -7,21 +7,57 @@
 
 .redes-sociales{
     display: inline;
-    width: 20%;
-    height: auto;
+    width: auto;
+    height: 13%;
     object-position: bottom 10px ;
 }
+
+.iconos{
+    display: inline;
+    width: 15%;
+    height: auto;
+    object-position: bottom 10px ; 
+}
+
+
 
 .objetos-menu{
     height: 50%;
 }
 
-.navbar-dark .nav-item > .nav-link.active {
-    color:white;
-    background-color: red;
+/* Navbar */
+#topheader .navbar-nav li > a {
+	text-transform: capitalize;
+	color: rgb(255, 255, 255);
+	transition: background-color .2s, color .2s;
+	
+	&:hover,
+	&:focus {
+    background-color: #333333;
+		color: #ffffff;
+	}
+}
+
+#topheader .navbar-nav li.active > a {
+	background-color: rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
 }
 
 /* Footer */
+
+* {
+    margin: 0;
+}
+html, body {
+    height: 100%;
+}
+
+footer{
+  width:100%;
+  min-height:100px;
+  position: relative;
+}
+
 .footer-dark {
     color:#f0f9ff;
     background-color:#282d32;
@@ -123,11 +159,6 @@
   flex: 1 0 calc(50% - 1rem);
   align-items: center;
   display: flex;
-}
-
-.iconos-footer{
-  width: 20%;
-  height: auto;
 }
 
 .creditos {

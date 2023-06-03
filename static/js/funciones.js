@@ -1,4 +1,5 @@
-$('.navbar-nav .nav-link').click(function(){
-    $(this).addClass('active');
-    $('.navbar-nav .nav-link').removeClass('active');
-})
+
+$( '#topheader .navbar-nav a' ).on( 'click', function () {
+	$( '#topheader .navbar-nav' ).find( 'li.active' ).removeClass( 'active' );
+	$( this ).parent( 'li' ).addClass( 'active' );
+});

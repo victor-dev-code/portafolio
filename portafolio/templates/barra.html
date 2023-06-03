@@ -1,14 +1,12 @@
 <html>
-	<body>
+	<div id="topheader">
 		<nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
 			<div class="container-fluid justify-content-center">
 				<ul class="navbar-nav">
 					<div class="container-fluid justify-content-center">
 						<li class="nav-item">
-							<!--a href="https://www.flaticon.com/free-icons/navigation-bar" title="navigation bar icons">Navigation bar icons created by Wahyu Adam - Flaticon</a-->
-							<a class="navbar-brand" href="">
-								<img src="static/images/browser.png" class="d-inline-block align-top img-fluid rounded float-left icono" alt="icono de inicio" />
-							</a>
+							<a class="navbar-brand" href="https://github.com/victor-dev-code">
+								<i class="fas fa-home fa-2x d-inline-block align-top img-fluid rounded float-left icono" alt="icono de inicio"></i></a>
 						</li>
 					</div>
 					<div class="container-fluid justify-content-center">
@@ -25,22 +23,29 @@
 							<a class="nav-link" href="contact_me"  >// Contact</a>
 						</li>
                     </div>
-                    <li>
-                        <div class="social">
-                            <li class="github">
-								<a href="https://github.com/victor-dev-code" title="Check my GitHub" target="_blank">
-									<img src="static/images/github.png" class="d-inline-block align-top img-fluid rounded float-left redes-sociales " alt="github" />
-								</a>
-							</li>
-                            <li class="linkedin">
-								<a href="https://www.linkedin.com/in/victor-manuel-hernández-yoval-47a882262/" title="Check my linkedin" target="_blank">
-									<img src="static/images/linkedin.png" class="d-inline-block align-top img-fluid rounded float-left redes-sociales " alt="linkedin" />
-								</a>
-							</li>
-                        </div>
-                    </li>
+                    
+					<div class="d-flex align-items-center">							
+						<button type="button" class="btn btn-dark me-3 iconos" onclick="location.href='https://github.com/victor-dev-code'">
+							<img src="static/images/github.png" class="fab fa-github redes-sociales d-inline-block img-fluid" alt="github" />
+						</button>
+						<button type="button" class="btn btn-dark me-3 iconos" onclick="location.href='https://www.linkedin.com/in/victor-manuel-hernández-yoval-47a882262/'">
+							<img src="static/images/linkedin.png" class="fab fa-github redes-sociales d-inline-block img-fluid" alt="github" />							
+						</button>
+
+						
+						<li class="nav-item dropdown">
+							<a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown09" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								<span class="flag-icon flag-icon-us"> </span> English
+							</a>
+                            <div class="dropdown-menu" aria-labelledby="dropdown09">
+                                <a class="dropdown-item" href="#es"><span class="flag-icon flag-icon-es"> </span>  Español</a>
+                            </div>
+                        </li>
+					</div>
+				
+                    
 				</ul>	
 			</div>		
 		</nav>
-	</body>
+	</div>
 </html>
