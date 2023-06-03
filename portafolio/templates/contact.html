@@ -1,8 +1,5 @@
 {% extends "base.html" %}
 
-{% block encabezado %}
-    <h1>CONTACT PAGE</h1>
-{% endblock %}
 
 {% block contenido%}
     <section class="ftco-section">
@@ -74,7 +71,7 @@
                 <div class="row no-gutters">
                     <div class="col-lg-5 contact-info__wrapper gradient-brand-color p-5 order-lg-2">
                         <h3 class="color--white mb-5">Hello there!</h3>
-                        <p class="mb-4">Email me with any question, I would be happy to answer you and...</p>
+                        <p class="mb-4">Email me with any question, I would be happy to answer you</p>
             
                         <ul class="contact-info__list list-style--none position-relative z-index-101">
                             <li class="mb-4 pl-4">
@@ -101,49 +98,42 @@
                     </div>
             
                     <div class="col-lg-7 contact-form__wrapper p-5 order-lg-1">
-                        <form action="#" class="contact-form form-validate" novalidate="novalidate" method="POST">
+                        {% if 'ok' in request.GET %}
+                            <div id="form-message-warning" class="mb-4"></div> 
+                            <div id="form-message-success" class="mb-4">
+                                Your message was sent successfully, thank you!
+                            </div>
+                        {% endif %}
+                        <form action="contact_me" class="contact-form form-validate" novalidate="novalidate" method="POST">
                             {% csrf_token %}
                             <div class="row">
-                                <div class="col-sm-6 mb-3">
+                                <!--div class="col-sm-6 mb-3">
                                     <div class="form-group">
                                         {{ form }}
                                     </div>
-                                </div>
-            
-                                <!--div class="col-sm-6 mb-3">
-                                    <div class="form-group">
-                                        <label class="required-field" for="firstName">Prénom</label>
-                                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Jean">
-                                    </div>
-                                </div>
+                                </div-->
             
                                 <div class="col-sm-6 mb-3">
                                     <div class="form-group">
-                                        <label for="lastName">Nom</label>
-                                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Dupont">
+                                        <label class="required-field" for="name">Name</label>
+                                        <div class="input-group" id="name">{{form.name}}</div>
                                     </div>
                                 </div>
             
                                 <div class="col-sm-6 mb-3">
                                     <div class="form-group">
                                         <label class="required-field" for="email">Email</label>
-                                        <input type="text" class="form-control" id="email" name="email" placeholder="jean@dupont.com">
-                                    </div>
-                                </div>
-            
-                                <div class="col-sm-6 mb-3">
-                                    <div class="form-group">
-                                        <label for="phone">Téléphone</label>
-                                        <input type="tel" class="form-control" id="phone" name="phone" placeholder="+32 71 123 456">
+                                        <div class="input-group" id="email">{{form.email}}</div>
                                     </div>
                                 </div>
             
                                 <div class="col-sm-12 mb-3">
                                     <div class="form-group">
-                                        <label class="required-field" for="message">Comment pouvons-nous vous aider ?</label>
-                                        <textarea class="form-control" id="message" name="message" rows="4" placeholder="Bonjour, j'aimerais…"></textarea>
+                                        <label class="required-field" for="message">Message</label>
+                                        <!--textarea class="input-group" id="message" name="message" rows="4" placeholder="Content"></textarea-->
+                                        <div class="input-group" id="message">{{form.content}}</div>
                                     </div>
-                                </div-->
+                                </div>
             
                                 <div class="col-sm-12 mb-3">
                                     <button type="submit" name="submit" class="btn btn-primary">Send Message</button>
