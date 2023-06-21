@@ -1,8 +1,23 @@
+/* Skills */
 .icono{
     display: inline;
-    width: 15%;
+    width: 10%;
     height: auto;
     object-position: bottom 10px ;
+}
+
+.card{
+  padding:10px;
+  border:none;
+  cursor:pointer;
+}
+
+.card:hover{
+  background-color:#eee;
+}
+
+.card span{
+  font-size:14px;
 }
 
 .redes-sociales{
@@ -209,4 +224,32 @@ footer{
 }
 .shadow-lg {
   box-shadow: 0 1rem 3rem rgba(132,138,163,0.1) !important;
+}
+
+/* Hero banner */
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.hero {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+hr {
+  width: 100%;
+  display: block;
+  background-color: gray;
+  color: gray;
 }

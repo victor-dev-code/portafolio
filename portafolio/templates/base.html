@@ -15,10 +15,45 @@
     </head>
 
     <body class="container-fluid p-3 my-3 d-flex flex-column min-vh-100">
-      {% include "barra.html" %}
-      <div class="container"></div>
       <header>
-        <h1>{% block encabezado %}{% endblock %}</h1>
+|       {% include "barra.html" %}
+
+        <section class="hero text-white" style="background-image: url('static/images/hero-image-002.jpg');">
+          <div class="hero-inner">
+            <h2 class="mb-3">Víctor Manuel Hernández Yoval</h1>
+            <hr>
+            <h4 class="mb-3">Back-End Developer</h4>
+          </div>
+        </section>
+ |     <!--div class="p-5 text-center bg-image" style="
+ background-image: url('static/images/hero-image-002.jpg');
+ height: 400px;
+">
+<div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+ <div class="d-flex justify-content-center align-items-center h-100">
+   <div class="text-white">
+     <img src="static/images/coding.png" class="img-fluid rounded icono-hero" />
+     <h1 class="mb-3">Víctor Manuel Hernández Yoval</h1>
+
+     <h4 class="mb-3">Back-End Developer</h4>
+     
+   </div>
+ </div>
+</div>
+</div>
+<div class="hero-full-screen"-->
+
+  <div class="bottom-content-section" data-magellan data-threshold="0">
+    <a href="#main-content-section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z"/></svg></a>
+  </div>
+
+</div>
+
+<div id="main-content-section" data-magellan-target="main-content-section">
+  <!-- your content goes here -->
+</div>
+
+
       </header>
       <section>
         {% block contenido %}
