@@ -6,14 +6,14 @@ def pagina_principal(request):
     template = 'index.html'
     return render(request, template)
 
-def contact_me(request):
+def home_page(request):
     formulario_contacto = ContactForm
     template = 'contact.html'
     if request.method == 'POST':
         formulario_contacto = formulario_contacto(data=request.POST)
         if formulario_contacto.is_valid():
             pass
-            return redirect(reverse('contact_me') + "?ok")
+            return redirect(reverse('home_page') + "?ok")
             
     return render(request, template, {'form': formulario_contacto})
 

@@ -4,13 +4,30 @@
 {% block contenido%}
     
     <section class="container ftco-section">
-        <div class="container">
+        <div class="container" id="about">
             <div class="container">
                 <div class="row justify-content">
                     <div class="text-center mb-5">
                         <h2 class="heading-section">ABOUT</h2>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="col-md-4 first-column">
+                        <img src="" alt="foto de perfil" />
+                    </div>
+                    <div class="col-md-8 my-auto">
+                        <h1>Who's this guy?</h1>
+                        <h3>Hello there! My name is <strong>Víctor Manuel Hernández Yoval</strong> I'm a Back-end Developer</h3>
+	                    <p>
+	                        Check my full CV below <i class="bi bi-arrow-down"></i> 
+	                    </p>
+	                    <a class="btn btn-primary btn-lg rounded-0 my-3" href="static/cv.pdf" target="_blank"><i class="bi bi-download"></i>Download CV</a>
+                    </div> 
+                  </div>
+                  
+                  <div class="row">
+                    
+                  </div>
             </div>
         </div>
 
@@ -28,17 +45,10 @@
                                       <div class="image">
                                           <img src="static/images/python-logo.png" alt="Python logo" width="36"/>
                                       </div>
-                                      <span>Python</span>
+                                      <span>Python + Django</span>
                                   </div>
                               </div>
-                              <div class="col-md-2">
-                                <div class="card text-center">
-                                   <div class="image">
-                                       <img src="static/images/django-logo.png" alt="Django logo" width="36"/>
-                                   </div>
-                                   <span>Django</span>
-                               </div>
-                              </div>
+                              
                               <div class="col-md-2">
                                    <div class="card text-center">
                                       <div class="image">
@@ -48,6 +58,14 @@
                                   </div>
                               </div>
                               
+                              <div class="col-md-2">
+                                <div class="card text-center">
+                                   <div class="image">
+                                       <img src="static/images/terminal.png" alt="Terminal icon" width="36"/>
+                                   </div>
+                                   <span>Linux Terminal</span>
+                               </div>
+                              </div>
                               
                               <div class="col-md-2">
                                 <div class="card text-center">
@@ -122,19 +140,10 @@
                               <div class="col-md-2">
                                 <div class="card text-center">
                                     <div class="image">
-                                        <img src="static/images/Docker_icon.png" alt="Docker logo" width="36" />
+                                        <img src="static/images/docker_icon.png" alt="Docker logo" width="36" />
                                     </div>
                                     <span>Docker</span>
                                 </div>
-                            </div>
-
-                            <div class="col-md-2">
-                              <div class="card text-center">
-                                  <div class="image">
-                                      <img src="static/images/microsoft-office-logo.png" alt="Microsoft Office logo" width="36"/>
-                                  </div>
-                                  <span>Microsoft Office</span>
-                              </div>
                             </div>
 
                             <div class="col-md-2">
@@ -154,92 +163,24 @@
                                   <span>Virtualbox</span>
                               </div>
                             </div>
-
-                            <div class="col-md-2">
-                              <div class="card text-center">
-                                  <div class="image">
-                                      <img src="static/images/Jenkins_logo.png" alt="Jenkins logo" width="36" />
-                                  </div>
-                                  <span>Jenkins</span>
-                              </div>
-                            </div>
-
-                            <div class="col-md-2">
-                              <div class="card text-center">
-                                  <div class="image">
-                                    <img src="static/images/Linux.png" alt="Linux logo" width="36" />
-                                  </div>
-                                  <span>Linux</span>
-                              </div>
-                            </div>
-
-                              
-                              
-                              
-                          </div>
                           
                       </div>
                     </div>
                 </div>
             </div>
         </div>
-        <!--div class="container">
-            <div class="row justify-content">
-				<div class="col-md-6 text-center mb-5">
-                    <h2 class="heading-section">Contact Form</h2>
-				</div>
-			</div>
-        </div>
-        <div class="row justify-content-center ">
-            <div class="col-lg-10">
-                <div class="wrapper">
-                    <div class="row no-gutters">
-                        <div class="col-md-6 d-flex align-items-stretch">
-                            <div class="contact-wrap w-100 p-md-5 p-4 py-5">
-                                <h3 class="mb-4">Write me</h3>
-                                <div id="form-message-warning" class="mb-4"></div> 
-                          <div id="form-message-success" class="mb-4">
-                        Your message was sent successfully, thank you!
-                          </div>
-                            <form class="form-horizontal" id="form" action="/gestion" method="POST">
-                                {% csrf_token %}
-
-                                <div class="col-sm-12"></div><br />
-        	                        <div class="col-sm-3"></div>
-         	                        <div class="col-sm-3 text-left">
-            	                    <input type="submit" value="Send Message">
-                                </div>
-                                
-                            </form>
-                            </div>
-                        </div>
-                        <div class="col-md-6 d-flex align-items-stretch">
-                            <div class="info-wrap w-100 p-md-5 p-4 py-5 img">
-                                <h3>Hello there! </h3>
-                                <p class="mb-4">Email me with any question, I would be happy to answer you and...</p>
-                        <div class="dbox w-100 d-flex align-items-center">
-                            <div class="icon d-flex align-items-center justify-content-center">
-                                <span class="fa fa-paper-plane"></span>
-                            </div>
-                            <div class="text pl-3">
-                            <p><span>Email:</span> <a href="#">hdezyvictor99@gmail.com</a></p>
-                          </div>
-                      </div>
-                        <div class="dbox w-100 d-flex align-items-center">
-                            <div class="icon d-flex align-items-center justify-content-center">
-                                <span class="fa fa-globe"></span>
-                            </div>
-                            <div class="text pl-3">
-                            <p><span>Home page:</span> <a href="#">elvictor099.com</a></p>
-                          </div>
-                      </div>
-                  </div>
-                        </div>
+        
+        <div class="container" id="portfolio">
+            <div class="container">
+                <div class="row justify-content">
+                    <div class="text-center mb-5">
+                        <h2 class="heading-section" >PORTFOLIO</h2>
                     </div>
                 </div>
             </div>
-        </div-->
-        <div class="container">
+        </div>
+
+        <div class="container" id="contact">
             <header class="container">
                 <div class="row justify-content">
 				    <div class="text-center mb-5">
@@ -250,7 +191,7 @@
             <div class="container contact__wrapper shadow-lg mt-n9">
                 <div class="row no-gutters">
                     <div class="col-lg-5 contact-info__wrapper gradient-brand-color p-5 order-lg-2">
-                        <h3 class="color--white mb-5">Hello there!</h3>
+                        <h3 class="color--white mb-5">Hello Again!</h3>
                         <p class="mb-4">Email me with any question, I would be happy to answer you</p>
             
                         <ul class="contact-info__list list-style--none position-relative z-index-101">
@@ -284,7 +225,7 @@
                                 <strong>Success!</strong> Your message was sent successfully, thank you!
                             </div>
                         {% endif %}
-                        <form action="contact_me" class="contact-form form-validate" novalidate="novalidate" method="POST">
+                        <form action="home_page" class="contact-form form-validate" novalidate="novalidate" method="POST">
                             {% csrf_token %}
                             <div class="row">
             
