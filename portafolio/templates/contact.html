@@ -12,22 +12,41 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-md-4 first-column">
+                    <div class="col-md-4 contact-form__wrapper p-5">
                         <img src="" alt="foto de perfil" />
                     </div>
-                    <div class="col-md-8 my-auto">
+                    <div class="col-md-8 my-auto bg-dark p-5 text-white">
                         <h1>Who's this guy?</h1>
-                        <h3>Hello there! My name is <strong>Víctor Manuel Hernández Yoval</strong> I'm a Back-end Developer</h3>
-	                    <p>
-	                        Check my full CV below <i class="bi bi-arrow-down"></i> 
-	                    </p>
-	                    <a class="btn btn-primary btn-lg rounded-0 my-3" href="static/cv.pdf" target="_blank"><i class="bi bi-download"></i>Download CV</a>
+                        <h5>Hello there! My name is <strong>Víctor Manuel Hernández Yoval</strong>. I'm a Back-end Developer</h5>
+	                        <p></p>
+	                        <p>Check my full CV below    <i class="fas fa-arrow-alt-circle-down"></i></p>
+	                    <a class="btn btn-primary bg-black btn-lg rounded-0 my-3 justify-content" href="static/CV_Victor.pdf" target="_blank"><i class="fas fa-download"></i>   Download CV</a>
                     </div> 
-                  </div>
-                  
-                  <div class="row">
-                    
-                  </div>
+                </div>
+
+                <div class="row my-auto bg-dark p-5 text-white">
+                    <div class="col-md-6" >
+                        <h4>Education</h4>
+                        <h6>BSc Networking and Computer Services</h6>
+                        <p><strong>Universidad Veracruzana</strong> | Xalapa, Ver., México (2017-2022)</p>
+                        <p><strong>Key modules:</strong> 
+                            Protocol Analysis, Operating Systems, Networking, Network Architecture, Advanced Routing, Programming, Databases Management, Server Management, Network Management Programming, Web System Development, Cybersecurity, Secure Programming, Cryptography
+                        </p>
+                        <p><strong>Dissertation:</strong> "Support to LISoft Development through Networking Services"</p>
+                    </div> 
+                    <div class="col-md-6" >
+                        <h4>Work Experience</h4>
+                        <h6>Support Engineer || Since February 2023</h6>
+                        <ul>
+                            <li>Install and connect Fortinet equipment.</li>
+                            <li>Install and connect Cisco Routers.</li>
+                            <li>Update Operating Systems to stable version.</li>
+                            <li>Make backups and restore Operating Systems.</li>
+                            <li>Printer and Computer maintenance.</li>
+                            <li>Support for Scitum, Cistic, BSS, etc. companies.</li>
+                        </ul>
+                    </div>    
+                </div>
             </div>
         </div>
 
@@ -176,6 +195,21 @@
                     <div class="text-center mb-5">
                         <h2 class="heading-section" >PORTFOLIO</h2>
                     </div>
+                </div>
+
+                <div class="row">
+                    {% for project in projects %}
+                        <div class="col-md-4 p-4">
+                            <div class="card bg-blue card-project">
+                                <img src="{{project.image.url}}" alt="{{project.title}}" class="card-img-top" />
+                                <div class="card-body">
+                                    <h2>{{project.title}}</h2>
+                                    <p>{{project.description}} </p>
+                                    <a href="{{project.url}}" class="btn btn-light rounded-0 btn-sm bg-info text-white" target="_blank">GitHub Link</a>
+                                </div>
+                            </div>
+                        </div>
+                    {% endfor %}
                 </div>
             </div>
         </div>
